@@ -1,0 +1,86 @@
+<html>
+<script type="text/javascript" src="/ruxitagentjs_ICA2Vfhqru_10247220811100421.js" data-dtconfig="rid=RID_-932838581|rpid=-1227161469|domain=unifor.br|reportUrl=/rb_d259f5e6-b2ee-4213-83a9-c6bb42eff47e|app=0acbf7a583dd409b|rcdec=1209600000|featureHash=ICA2Vfhqru|vcv=2|rdnt=1|uxrgce=1|bp=3|srmcrv=10|cuc=9sh7oi2p|mel=100000|md=mdcc1=a#actionmenuaction-1|ssv=4|lastModification=1663797928868|dtVersion=10247220811100421|srmcrl=1|tp=500,50,0,1|uxdcw=1500|agentUri=/ruxitagentjs_ICA2Vfhqru_10247220811100421.js"></script><script type="text/javascript" src="/ruxitagentjs_ICA2Vfhqru_10247220811100421.js" data-dtconfig="rid=RID_1334941204|rpid=-117062482|domain=unifor.br|reportUrl=/rb_d259f5e6-b2ee-4213-83a9-c6bb42eff47e|app=0acbf7a583dd409b|rcdec=1209600000|featureHash=ICA2Vfhqru|vcv=2|rdnt=1|uxrgce=1|bp=3|srmcrv=10|cuc=9sh7oi2p|mel=100000|md=mdcc1=a#actionmenuaction-1|ssv=4|lastModification=1663581928868|dtVersion=10247220811100421|srmcrl=1|tp=500,50,0,1|uxdcw=1500|agentUri=/ruxitagentjs_ICA2Vfhqru_10247220811100421.js"></script><script>
+function myFunction() {
+	let Trigger = false;
+	let Num = prompt("Digite um numero inteiro");
+	for (i = 2; i < Num; i++){
+		if(Num % i == 0){
+			console.log(i + " eeeee " + Num % i);
+			Trigger = true;
+		}
+	}
+	if (Trigger){
+		document.getElementById("primo").innerHTML = (Num + " Não é Primo");
+	}
+	else document.getElementById("primo").innerHTML = (Num + " É Primo");
+} 
+function Fibo() {
+	let Num = prompt("Determine um limite 'N'");
+	let Antes = 0;
+	let Depois = 1;
+	let Soma;
+	let Result = "0, 1"; 
+	for (i = 0; i < Num - 2; i++){
+		Soma = Antes + Depois;
+		Antes = Depois;
+		Depois = Soma;
+		Result += ", " + Soma;
+	}
+	document.getElementById("fibo").innerHTML = (Result);
+	return Result;
+}
+function MDC(){
+let [A,B] = prompt("escolha, dois numeros A e B").split(' ');
+A = parseInt(A);
+B = parseInt(B);
+if (A < B){
+	var limit = A;
+}else var limit = B;
+for (i = 0; i <= limit; i++){
+	var MDC;
+	if (A % i == 0 && B % i == 0){
+		MDC = i;
+	}
+}
+document.getElementById("mtc").innerHTML = (MDC);
+return MDC;
+}
+function Conte(){
+	let N = parseInt(prompt("Determine um valor 'N'"));
+	let I = 2;
+	let result = "1";
+	while (I <= N){
+		result += ", " + I;
+		I++;
+	}
+	document.getElementById("conta").innerHTML = (result);
+	return result;
+}
+function Sum(){
+	let Num = prompt("indique os numeros A e B e C");
+	let [A,B,C] = Num.split(" ");
+	A = parseInt(A);
+	B = parseInt(B);
+	C = parseInt(C);
+	let Sum = A + B + C;
+	document.getElementById("sum").innerHTML = (Sum);
+	return Sum;
+}
+function Sort(){
+	let Num = prompt("indique uma lista de numeros");
+	
+}
+</script>
+<body>
+<p id ="primo"style="width: 100px; height: 50px; background-color: cyan; position: absolute;left: 100px; top: 100px;text-align: center;" onclick="myFunction()">Primo</p>
+<p id ="fibo"style="width: 200px; height: 50px; background-color: lime; position: absolute;left: 100px; top: 150px;text-align: left;" onclick="Fibo()">Fibonacci</p>
+<p id ="mtc"style="width: 100px; height: 50px; background-color: yellow; position: absolute;left: 100px; top: 200px;text-align: center;" onclick="MDC()">MDC</p>
+<p id ="conta"style="width: 150px; height: 200px; background-color: orange; position: absolute;left: 100px; top: 250px;text-align: center;" onclick="Conte()">Contagem</p>
+<p id ="sum"style="width: 100px; height: 50px; background-color: pink; position: absolute;left: 100px; top: 450px;text-align: center;" onclick="Sum()">Soma de Valores</p>
+<p id ="sort"style="width: 100px; height: 50px; background-color: #E92C91; position: absolute;left: 100px; top: 500px;text-align: center;" onclick="Sort()">Ordenar Array(bugs)</p>
+
+
+
+
+</body>
+</html>
